@@ -1,7 +1,14 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<h1>Hello from Adv. .Net</h1>
+<h1>Hello from @ViewBag.Name</h1>
+<h2>Students: @ViewBag.Count</h2>
+<h3>Names</h3>
+<ul>
+    @for (int i = 0; i < ViewBag.Students.Length; i++) { 
+        <li>@ViewBag.Students[i]</li>
+    }
+</ul>
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>

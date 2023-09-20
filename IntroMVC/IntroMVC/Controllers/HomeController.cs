@@ -10,6 +10,10 @@ namespace IntroMVC.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Name = "Adv Programming with .Net";
+            ViewBag.Count = 40;
+            ViewBag.Students = new String[] { "Rahim","Karim","Salam"};
+            
             return View();
         }
 
