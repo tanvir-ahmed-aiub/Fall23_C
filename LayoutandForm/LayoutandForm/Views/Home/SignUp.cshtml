@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_OuterLayout.cshtml";
+}
+
+@{ 
+    bool CheckGender(string gender) {
+        if (Model != null &&
+            Model.Gender != null
+            && Model.Gender.Equals(gender)) {
+            return true;
+        }
+        return false;
+    }
+    bool CheckHobbies(string hobby) {
+        if (Model != null &&
+            Model.Hobbies != null) {
+            foreach (var h in Model.Hobbies) {
+                if (h.Equals(hobby)) return true;
+            }
+        }
+        return false;
+    }
+
+
+}
+<h2>SignUp</h2>
+<p class="text-danger">
+    @Html.ValidationSummary()
+</p>
+<form action="" method="post">
+    Name: <input type="text" name="Name" value="@(Model == null? "":Model.Name)" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span>
+    <br />
+    Gender: <input type="radio" checked="@CheckGender("Male")" value="Male" name="Gender" /> Male
+    <input type="radio" checked="@CheckGender("Female")"  value="Female" name="Gender" />Female
+    <br />
+    <span class="text-danger">@Html.ValidationMessage("Gender")</span>
+    <br />
+    Profession:
+    <select name="Profession">
+        <option disabled selected>---Select---</option>
+        <option>Teacher</option>
+        <option selected>Student</option>
+        <option>Business</option>
+    </select>
+    <br />
+    <span class="text-danger">@Html.ValidationMessage("Profession")</span>
+    <br />
+    Hobbies:
+    <input type="checkbox" checked="@CheckHobbies("Travelling")" name="Hobbies[]" value="Travelling" /> Travelling
+    <input type="checkbox" checked="@CheckHobbies("Music")" name="Hobbies[]" value="Music" /> Music
+    <input type="checkbox" checked="@CheckHobbies("Sports")" name="Hobbies[]" value="Sports" /> Sports
+    <input type="checkbox" checked="@CheckHobbies("Gaming")" name="Hobbies[]" value="Gaming" /> Gaming
+    <br />
+    <span class="text-danger">@Html.ValidationMessage("Hobbies")</span>
+    <br />
+    <input type="submit" value="Sign Up" class="btn btn-success" />
+</form>
+
