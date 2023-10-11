@@ -12,21 +12,20 @@ namespace IntroEF.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class Department
+    public partial class Cours
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Department()
+        public Cours()
         {
-            this.Courses = new HashSet<Cours>();
-            this.Students = new HashSet<Student>();
+            this.CourseStudents = new HashSet<CourseStudent>();
         }
     
         public int Id { get; set; }
         public string Name { get; set; }
+        public int DeptId { get; set; }
     
+        public virtual Department Department { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cours> Courses { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Student> Students { get; set; }
+        public virtual ICollection<CourseStudent> CourseStudents { get; set; }
     }
 }

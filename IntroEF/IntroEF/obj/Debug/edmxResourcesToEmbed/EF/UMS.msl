@@ -12,9 +12,29 @@
     <EntitySetMapping Name="Students">
       <EntityTypeMapping TypeName="DemoF23_CModel.Student">
         <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Cgpa" ColumnName="Cgpa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="DemoF23_CModel.Cours">
+        <MappingFragment StoreEntitySet="Courses">
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CourseStudents">
+      <EntityTypeMapping TypeName="DemoF23_CModel.CourseStudent">
+        <MappingFragment StoreEntitySet="CourseStudents">
+          <ScalarProperty Name="EnrollTime" ColumnName="EnrollTime" />
+          <ScalarProperty Name="StId" ColumnName="StId" />
+          <ScalarProperty Name="CId" ColumnName="CId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

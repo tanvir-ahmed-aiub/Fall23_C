@@ -7,6 +7,12 @@
       <Diagram DiagramId="290e71c9098f4ff7a695d4bcea68f9fc" Name="Diagram1">
         <EntityTypeShape EntityType="DemoF23_CModel.Department" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DemoF23_CModel.Student" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoF23_CModel.Cours" Width="1.5" PointX="3" PointY="4.625" />
+        <EntityTypeShape EntityType="DemoF23_CModel.CourseStudent" Width="1.5" PointX="5.25" PointY="2.625" />
+        <AssociationConnector Association="DemoF23_CModel.FK_Courses_Departments" />
+        <AssociationConnector Association="DemoF23_CModel.FK_CourseStudents_Courses" />
+        <AssociationConnector Association="DemoF23_CModel.FK_CourseStudents_Students" />
+        <AssociationConnector Association="DemoF23_CModel.FK_Students_Departments" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
