@@ -1,4 +1,5 @@
-﻿using RegistrationModule.EF;
+﻿using RegistrationModule.Auth;
+using RegistrationModule.EF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,10 @@ namespace RegistrationModule.Controllers
     public class RegistrationController : Controller
     {
         // GET: Registration
+        [Logged]
         public ActionResult Info()
         {
+         
             var db = new DemoF23_CEntities();
             ViewBag.Courses = db.Courses.ToList();
             return View();

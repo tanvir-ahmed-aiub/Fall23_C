@@ -81,3 +81,5 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\C\RegistrationModule\RegistrationModule\obj\D
 C:\Users\Tanvir Ahmed\Desktop\.NET\C\RegistrationModule\RegistrationModule\obj\Debug\RegistrationModule.csproj.CopyComplete
 C:\Users\Tanvir Ahmed\Desktop\.NET\C\RegistrationModule\RegistrationModule\obj\Debug\RegistrationModule.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\C\RegistrationModule\RegistrationModule\obj\Debug\RegistrationModule.pdb
+C:\Users\Tanvir Ahmed\Desktop\.NET\C\RegistrationModule\RegistrationModule\bin\AutoMapper.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\C\RegistrationModule\RegistrationModule\bin\AutoMapper.xml
